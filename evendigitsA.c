@@ -1,6 +1,6 @@
 /*  
-Write a C code to check if a number has even digits or odd digits. Check till 9 digit no.
-Test score : INPUT 57, OUTPUT even digits , INPUT 264 , OUTPUTodd digits.
+Write a C code to check if a number has even no. of digits or odd no. of digits. Check till 9 digit no.
+Test score : INPUT 57 & OUTPUT even digits , INPUT 264 & OUTPUTodd digits.
 */
 
 #include<stdio.h>
