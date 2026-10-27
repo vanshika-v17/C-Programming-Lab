@@ -4,24 +4,33 @@ struct rectangle {
     float length;
     float width;
     float area;
-    float perimeter;
-};
+    float p;    
+};                                                                                                            
+
 
 int main() {
+    struct rectangle r[10];
 
-    struct rectangle r1;
+    printf("size = %zu bytes\n", sizeof(struct rectangle));
+    
+    for(int i = 0; i < 10; i++)
+    {
+        printf("Enter length:");
+        scanf("%f", &r[i].length);
 
-    printf("Enter length:");
-    scanf("%f", &r1.length);
+        printf("Enter width: ");
+        scanf("%f", &r[i].width);
 
-    printf("Enter width:");
-    scanf("%f", &r1.width);
+        r[i].area = r[i].length * r[i].width;
+        r[i].p = 2 * (r[i].length + r[i].width);
+    }
 
-    r1.area = r1.length * r1.width;
-    r1.perimeter = 2 * (r1.length + r1.width);
 
-    printf("Area = %f\n", r1.area);
-    printf("Perimeter = %f\n", r1.perimeter);
+    for(int i = 0; i < 10; i++)
+    {
+        printf("Area = %f\n", r[i].area);
+        printf("Perimeter = %f\n", r[i].p);
+    }
 
     return 0;
 }
